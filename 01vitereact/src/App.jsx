@@ -3,7 +3,12 @@ function App() {
  
 
   return (
-      <Chai/>
+    <div>
+       <Chai/>
+
+    <h1>chai or react</h1>
+    </div>
+     
   )
 }
 
