@@ -1,17 +1,26 @@
-import { useState } from 'react'
+import { useState} from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
   
-  let counter =15;
+  let [counter,setCounter] =useState(15) // counter variable hai and set setCounter function hai
+
+
+  //let counter =15;
+
   const addValue = ()=>{
     console.log("clicked",counter);
     
    // console.log("value added",Math.random());
-   counter = counter +1;
+   //counter = counter +1;
+   setCounter(counter+1)
     
+  }
+
+  const removeValue = ()=>{
+    setCounter(counter-1)
   }
 
   return (
@@ -24,7 +33,9 @@ function App() {
       onClick={addValue}
       >Add value:{counter}</button>
       <br />
-      <button>remove value:{counter}</button>
+      <button
+      onClick={removeValue}
+      >remove value:{counter}   </button>
       <p>footer:{counter}</p>
     </>
   )
