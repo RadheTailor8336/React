@@ -5,7 +5,7 @@ import './App.css'
 
 function App() {
   
-  let [counter,setCounter] =useState(15) // counter variable hai and set setCounter function hai
+  const [counter,setCounter] =useState(15) // counter variable hai and set setCounter function hai
 
 
   //let counter =15;
@@ -15,7 +15,10 @@ function App() {
     
    // console.log("value added",Math.random());
    //counter = counter +1;
-   setCounter(counter+1)
+   setCounter(prevCounter=>prevCounter + 1)//prevcounter ke under previous value aati hain
+   setCounter(prevCounter=>prevCounter + 1)
+   setCounter(prevCounter=>prevCounter + 1)
+   setCounter(prevCounter=>prevCounter + 1)
     
   }
 
